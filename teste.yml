@@ -1,0 +1,12 @@
+cat <<EOF > .github/workflows/main.yml
+name: Teste de Conexao
+on: [push]
+jobs:
+  check-connection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mensagem de Boas Vindas
+        run: echo "O ambiente de CI/CD do Abade está funcionando!"
+      - name: Verificando Versao do Bash
+        run: bash --version
+EOF
